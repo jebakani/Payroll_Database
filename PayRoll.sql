@@ -18,3 +18,6 @@ INSERT INTO PayRollTable VALUES('aaa',15293,'2021-07-30')
 --UC4-Retriving the data from the table
 SELECT * FROM PayRollTable
 
+--UC5-Retriving data Based on condition
+SELECT salary FROM PayRollTable where name='xyz'
+SELECT salary FROM PayRollTable where startDate between CAST('2021-01-01' as date) and GETDATE()
