@@ -156,3 +156,8 @@ select * from PayRoll
 
 select * from PayRoll where Emp_id in (select Emp_id from Employee_Department where Dept_id=4)
 
+--UC7-Finding sum avg,min,max
+select sum(PayRoll.NetPay) as totalsalary,Employee.gender from PayRoll,Employee group by gender
+select max(PayRoll.NetPay) as Minsalary,Employee.gender from PayRoll,Employee group by gender
+select min(PayRoll.NetPay) as Maxsalary,Employee.gender from PayRoll,Employee group by gender
+select avg(PayRoll.NetPay) as Avgsalary,Employee.gender from PayRoll,Employee group by gender
